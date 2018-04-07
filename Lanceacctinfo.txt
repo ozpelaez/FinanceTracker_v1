@@ -1,0 +1,17 @@
+           Lance's Account 
+ 
+Symbol         Change        Balance   
+--------------------------------------- 
+*Depo*        8000.00        8000.00
+NFLX          1500.00        9500.00
+ADBE          4375.00       13875.00
+FB             -37.50       13837.50
+*With*       -3000.00       10837.50
+*With*       -2000.00        8837.50
+IBM           2300.00       11137.50
+
+
+Total amount in this account: 11137.50
+
+Total tax due: 813.75
+

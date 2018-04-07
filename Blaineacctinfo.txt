@@ -1,0 +1,15 @@
+           Blaine's Account 
+ 
+Symbol         Change        Balance   
+--------------------------------------- 
+*Depo*        3000.00        3000.00
+AAPL            60.00        3060.00
+GOOGL           60.00        3120.00
+*With*        -300.00        2820.00
+FB             -37.50        2782.50
+
+
+Total amount in this account: 2782.50
+
+Total tax due: 8.25
+
