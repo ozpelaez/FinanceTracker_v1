@@ -21,6 +21,7 @@ Transaction::Transaction()
 	acctChange = 0.00;
 	stockSale = false;
 	shared = false;
+	commission = 13.9;
 }
 
 bool Transaction::isSale()
@@ -53,6 +54,10 @@ void Transaction::bankDepo(string date, double amount)
 // *IMPORTANT*: If a stockTrade is shared with another account, then
 // the Transaction MUST be set as SHARED prior to calling stockTrade.
 // Otherwise, acctChange will not be correct.
+//
+// 04/17/18: stockTrade now overloaded to properly account for commission
+// fees. First version is for when taking in info from console. Second 
+// version is for reading in info through Filer.
 void Transaction::stockTrade(string nme, int shrs, string bd, double bp, string sd, double sp)
 {
 	activity = nme;
@@ -63,9 +68,25 @@ void Transaction::stockTrade(string nme, int shrs, string bd, double bp, string 
 	sellPrice = sp;
 	prcntChange = (sp - bp) / bp *100.00;
 	stockSale = true;
-	if (shared) acctChange = (sp - bp)*shrs/2.0;
-	else acctChange = (sp - bp)*shrs;
+	if (shared) acctChange = ((sp - bp)*shrs - commission)/2.0;
+	else acctChange = (sp - bp)*shrs - commission;
 	
+}
+
+void Transaction::stockTrade(string nme, int shrs, string bd, double bp, string sd, double sp, double cm)
+{
+	activity = nme;
+	shares = shrs;
+	buyDate = bd;
+	buyPrice = bp;
+	sellDate = sd;
+	sellPrice = sp;
+	commission = cm;
+	prcntChange = (sp - bp) / bp * 100.00;
+	stockSale = true;
+	if (shared) acctChange = ((sp - bp)*shrs - commission) / 2.0;
+	else acctChange = (sp - bp)*shrs - commission;
+
 }
 
 // Sets a Transaction to SHARED

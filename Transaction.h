@@ -12,7 +12,8 @@ public:
 	~Transaction();
 	void bankWith(string date, double amount);
 	void bankDepo(string date, double amount);
-	void stockTrade(string nme, int shrs, string bd, double bp , string sd, double sp);
+	void stockTrade(string nme, int shrs, string bd, double bp, string sd, double sp);
+	void stockTrade(string nme, int shrs, string bd, double bp, string sd, double sp, double cm);
 	void printContent();
 	void acctInfo();
 	bool isSale();
@@ -28,6 +29,7 @@ private:
 	double sellPrice;
 	double prcntChange;
 	double acctChange;
+	double commission;
 	bool stockSale;
 	bool shared;
 };

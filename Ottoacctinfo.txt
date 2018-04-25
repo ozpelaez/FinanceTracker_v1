@@ -1,0 +1,13 @@
+           Otto's Account 
+ 
+Symbol         Change        Balance   
+--------------------------------------- 
+*Depo*        3000.00        3000.00
+AAPL           486.10        3486.10
+FB             361.10        3847.20
+
+
+Total amount in this account: 3847.20
+
+Total tax due: 84.72
+

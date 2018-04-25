@@ -48,6 +48,7 @@ void Filer::readRawTransac()
 		double price1;
 		double price2;
 		bool check;
+		double comm;
 
 		reader >> symb;
 
@@ -58,9 +59,9 @@ void Filer::readRawTransac()
 		}
 
 		else {
-			reader >> shrs >> date1 >> price1 >> date2 >> price2 >> check;
+			reader >> shrs >> date1 >> price1 >> date2 >> price2 >> check >> comm;
 			if (check) bookkeeper[i].setShared();
-			bookkeeper[i].stockTrade(symb, shrs, date1, price1, date2, price2);
+			bookkeeper[i].stockTrade(symb, shrs, date1, price1, date2, price2, comm);
 			
 		}
 	}
@@ -78,7 +79,7 @@ void Filer::makeRawTransac()
 		
 		if (bookkeeper[i].stockSale) {
 			worker << bookkeeper[i].activity << " " << bookkeeper[i].shares << " " << bookkeeper[i].buyDate << " ";
-			worker << setprecision(6) << bookkeeper[i].buyPrice << " " << bookkeeper[i].sellDate << " " << bookkeeper[i].sellPrice<< " " << bookkeeper[i].shared << endl;
+			worker << setprecision(6) << bookkeeper[i].buyPrice <<" "<< bookkeeper[i].sellDate <<" "<< bookkeeper[i].sellPrice<<" "<< bookkeeper[i].shared <<" "<< bookkeeper[i].commission<< endl;
 		}
 
 		else {

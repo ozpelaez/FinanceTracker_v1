@@ -147,6 +147,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="DefaultReader.h" />
+    <ClInclude Include="DefaultWriter.h" />
     <ClInclude Include="Filer.h" />
     <ClInclude Include="MenuOptions.h" />
     <ClInclude Include="MoneyAcct.h" />
@@ -158,6 +160,8 @@
     <ClInclude Include="Transaction.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DefaultReader.cpp" />
+    <ClCompile Include="DefaultWriter.cpp" />
     <ClCompile Include="Filer.cpp" />
     <ClCompile Include="FinanceTracker_V1.cpp" />
     <ClCompile Include="MoneyAcct.cpp" />
@@ -165,6 +169,7 @@
     <ClCompile Include="Option2.cpp" />
     <ClCompile Include="Option3.cpp" />
     <ClCompile Include="Option4.cpp" />
+    <ClCompile Include="Option5.cpp" />
     <ClCompile Include="Prnt2Scn.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

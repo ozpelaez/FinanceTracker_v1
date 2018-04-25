@@ -1,0 +1,8 @@
+                           Otto's Transactions 
+ 
+                     Buy Info             Sell Info      Percent   Change to 
+Symb    Shrs      Date       Price     Date       Price   Change    Account 
+-------------------------------------------------------------------------------- 
+Depo                                01/01/2018                      3000.00
+AAPL      50   01/05/2018    55.00  01/07/2018    65.00   18.18      486.10
+FB        15   02/01/2018   100.00  02/05/2018   125.00   25.00      361.10
